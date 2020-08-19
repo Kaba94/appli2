@@ -14,6 +14,7 @@ class HomeController extends AbstractController
     {
         // throw new \Exception('Je suis un message d\'erreure !');
 
+
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
         ]);
