@@ -26,11 +26,11 @@
                                             <strong>{{ artist.name }}</strong>
                                         </a>
                                         <br>
-                                        {{ artist.description|slice(0, 37) }}
+                                        {{ artist.description|slice(0, 30) }}
                                     </p>
                                     {% if artist.description == null %}
-                                        <p class="has-text-grey-light">
-                                        {{ 'je n\'ai pas encore de description' }}
+                                        <p class="has-text-centered has-text-grey-light is-size-7	0.75rem">
+                                        {{ '(je n\'ai pas encore de description)' }}
                                         </p>
                                     {% endif %}
                                 </div>
