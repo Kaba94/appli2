@@ -1,0 +1,19 @@
+{% extends "_template.html.twig" %}
+
+{% block title %}
+    Artiste : {{ artist.name }}
+{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <h1 class="title">Artiste : {{ artist.name }}</h1>
+        <p>{{ artist.description }}</p>
+        {% if artist.description == null %}
+            <p class="has-text-centered has-text-grey-light is-size-7	0.75rem">
+                {{ '(je n\'ai pas encore de description)' }}
+            </p>
+        {% endif %}
+        <h3 class="subtitle">Discographie : {{ artist.records|length }}</h3>
+        {% include 'record/_record_list.html.twig' with {record_list: artist.records} %} 
+    </div>
+{% endblock %}
