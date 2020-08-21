@@ -19,6 +19,12 @@
                             <strong>Artiste:</strong>
                             <a href=" {{ path('artist_page', {id: record.artist.id}) }} "> {{ record.artist.name }} </a>
                         </small><br>
+                        {% if record.label is not null %}
+                            <small>
+                                <strong>Label:</strong>
+                                <a href=" {{ path('label_page', {id: record.label.id}) }} "> {{ record.label.name }} </a>
+                            </small><br>
+                        {% endif %}
                         {{ record.description|slice(0,50) }}
                         {% if record.description == null %}
                              <p class="has-text-centered has-text-grey-light is-size-7	0.75rem">
