@@ -51,7 +51,7 @@ abstract class BaseFixture extends Fixture
     {
         for($i = 0; $i < $count; $i++) {
             // On exécute $factory qui doit retourner l'entité générée
-            $entity = $factory();
+            $entity = $factory($i);
 
             // Vérifier que l'entité ait été retournée
             if ($entity === null) {
