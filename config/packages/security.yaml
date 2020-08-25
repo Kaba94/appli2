@@ -36,6 +36,8 @@ security:
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/admin, roles: ROLE_EDITOR }
     role_hierarchy:
         # ROLE_ADMIN: [ROLE_TEST, ROLE_EXEMPLE]
         # ROLE_MANAGER: [ROLE_EMPLOYES, ROLE_SUPPORT]
+        ROLE_ADMIN: [ROLE_EDITOR]
