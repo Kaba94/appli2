@@ -1,0 +1,43 @@
+{% extends '_template.html.twig' %}
+
+{% block title %}
+    Profil
+{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <h1 class="title">Mon Profil</h1>
+        <div class="columns">
+            <div class="column">
+                <h3 class="subtitle">Mes infos</h3>
+                    {{ form_start(profileForm) }}
+
+                    {{ form_row(profileForm.email, {label: "Adresse email:"}) }}
+                    {{ form_row(profileForm.pseudo, {label: "Pseudo:"}) }}
+
+                    <button type="submit" class="button is-primary is-fullwidth">
+                        Mettre à jour
+                    </button>
+                    {{ form_end(profileForm) }}
+            </div>
+            
+            <div class="column">
+                <h3 class="subtitle">Mot de passe du compte</h3>
+                    {{ form_start(passwordForm) }}
+
+                    {{ form_row(passwordForm.plainPassword.first, {label: "Nouveau mot de passe:"}) }}
+                    {{ form_row(passwordForm.plainPassword.second, {label: "Confirmer le nouveau mot de passe:"}) }}
+
+                    <button type="submit" class="button is-primary is-fullwidth">
+                        Mettre à jour
+                    </button>
+                    {{ form_end(passwordForm) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+
